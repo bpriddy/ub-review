@@ -61,7 +61,9 @@ npm run dev   # starts on :3003
 
 ## Deploy
 
-Push to `main` → Cloud Build → Cloud Run (`gub-review-dev`). No IAP on
+Manual: **Actions → Deploy → Run workflow** on `main`, then bpriddy approves
+the run (GitHub Environment `prod`; `os-test-491819` is UB prod). A push to
+`main` no longer deploys (D37 step 1). It rolls Cloud Run `gub-review-dev`. No IAP on
 the service; `--allow-unauthenticated` is set intentionally.
 
 ## Secrets & rotation
